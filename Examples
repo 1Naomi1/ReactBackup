@@ -1,0 +1,35 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int[] arr = { 78, 55, 45, 98, 13 };
+        int temp;
+
+        Console.Write("Original array: ");
+        foreach (int item in arr)
+        {
+            Console.Write(item + " ");
+        }
+
+        for (int i = 0; i < arr.Length; i++)
+        {
+            for (int j = i + 1; j < arr.Length; j++)
+            {
+                if (arr[i] > arr[j])
+                {
+                    temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+
+        Console.Write("\nSorted array: ");
+        foreach (int item in arr)
+        {
+            Console.Write(item + " ");
+        }
+    }
+}
